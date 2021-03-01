@@ -1,10 +1,19 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { FullComponent } from './layout/full/full.component'
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+export const AppRoutes: Routes = [
+  {
+    path: '',
+    component: FullComponent,
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardModule ),
+  },
+  {
+    path: 'vr',
+    loadChildren: () => import('./vr/vr.module').then( m => m.VrModule),
+  },
+  {
+    path: 'ar',
+    loadChildren: () => import('./ar/ar.module').then( m => m.ArModule),
+  },
+];

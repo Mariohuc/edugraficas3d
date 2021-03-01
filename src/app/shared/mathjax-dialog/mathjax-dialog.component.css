@@ -1,0 +1,24 @@
+
+.mathjax-card-dialog{
+  margin: 0px;
+  background-color:rgb(13, 116, 35);
+  color: rgb(252, 252, 252);
+}
+
+.mathjax-card-dialog mat-card-title {
+  font-family: Cambria, Georgia, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 28.4px;
+  margin: 0.2em 0em;
+}
+
+.mathjax-header-image {
+  background-image: url('/assets/images/mathjax-card-image.png');
+  background-color: blanchedalmond;
+  background-size: cover;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+}

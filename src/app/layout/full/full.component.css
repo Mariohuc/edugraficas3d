@@ -1,0 +1,46 @@
+.app-bar {
+  background-color: #12A4C5;
+  color: #ffffff;
+  z-index: 0;
+  position: relative;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+
+@media screen and (min-width: 960px) {
+  mat-toolbar {
+     z-index: 50;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  mat-toolbar {
+     z-index: 0;
+  }
+}
+
+@media screen and (max-width: 599px) {
+    .main-sidenav-container {
+        width: 100%;
+        height: calc(100vh - 56px);
+        z-index: 100;
+    }
+}
+
+@media screen and (min-width: 600px) {
+  .main-sidenav-container {
+      width: 100%;
+      height: calc(100vh - 64px);
+  }
+}
+mat-toolbar span{
+  font-family: Cambria, Georgia, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
+}

@@ -1,0 +1,120 @@
+
+.math-card{
+  margin: 5px;
+}
+
+.example-header-image {
+  background-image: url('/assets/images/math-card-avatar.png');
+  background-size: cover;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+}
+.example-header-image-2 {
+  background-image: url('/assets/images/math-card-avatar-2.png');
+  background-size: cover;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+}
+.example-header-image-3 {
+  background-image: url('/assets/images/math-card-avatar-3.png');
+  background-size: cover;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+}
+.example-header-image-4 {
+  background-image: url('/assets/images/math-card-avatar-4.png');
+  background-size: cover;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+}
+
+.function-card{
+  background-color:green;
+}
+
+.psurface-card{
+  background-color: purple;
+}
+
+.qsurface-card{
+  background-color: orangered;
+}
+
+.math-card .graph-button{
+  background-color: #0418cf;
+  color: #ffffff;
+
+  border: 2px solid;
+  border-color: #ffffff;
+}
+.math-card .graph-button:hover{
+  background-color: #ffffff;
+  color: #0418cf;
+  border-color: #0418cf;
+}
+
+.math-card .ar-button{
+  background-color: #d3a200;
+  color: #ffffff;
+
+  border: 2px solid;
+  border-color: #ffffff;
+}
+.math-card .ar-button:hover{
+  background-color: #ffffff;
+  color: #d3a200;
+  border-color: #d3a200;
+}
+
+.math-card .title{
+  display: flex;
+  justify-content: start;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.math-card .subtitle{
+  font-family: Arial, sans-serif;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: start;
+  
+}
+.math-card .subtitle .sub-content{
+  margin: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.math-card .equation {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  font-size: medium;
+  font-style: oblique;
+  font-family: Cambria, Georgia, serif;
+  font-variant: normal;
+  
+}
+
+.math-card .equation .i-equation{
+  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.math-card .math-card-actions{
+  padding-top: 5px;
+}
+
+.math-card mat-card-title{
+  font-family: Cambria, Georgia, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 28.4px;
+  margin: 0.2em 0em;
+}

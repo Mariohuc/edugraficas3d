@@ -1,0 +1,19 @@
+.custom-button{
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  z-index: 5;
+}
+.custom-button-2{
+  position: absolute;
+  left: 10px;
+  top: 80px;
+  z-index: 5;
+}
+
+.ar-viewer {
+  position: absolute;
+  height: calc(100vh - 2px);
+  width: calc(100vw - 2px);
+  box-sizing: border-box;
+}

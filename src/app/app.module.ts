@@ -1,18 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router'
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutes } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DemoMaterialModule } from './demo-material-module';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+import { SpinnerComponent } from './shared/spinner.component';
+import { FullComponent } from './layout/full/full.component';
+import { MathjaxComponent } from './shared/mathjax/mathjax.component';
+import { MathjaxDialogComponent } from './shared/mathjax-dialog/mathjax-dialog.component';
+import { GlobalService } from "./shared/services/global.service";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SpinnerComponent,
+    FullComponent,
+    MathjaxDialogComponent,
+    MathjaxComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule.forRoot( AppRoutes, { useHash: true }),
+    DemoMaterialModule,
+    FlexLayoutModule,
+    BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [ GlobalService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

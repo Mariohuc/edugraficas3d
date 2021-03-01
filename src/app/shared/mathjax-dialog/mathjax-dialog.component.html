@@ -1,0 +1,10 @@
+<mat-card class="mathjax-card-dialog">
+  <mat-card-header>
+    <div mat-card-avatar class="mathjax-header-image"></div>
+    <mat-card-title>{{ data.title }}</mat-card-title>
+  </mat-card-header>
+  <hr>
+  <mat-card-content>
+    <app-mathjax [contents]="data.mathContent" style="margin:0px; padding:0px"></app-mathjax>
+  </mat-card-content>
+</mat-card>
