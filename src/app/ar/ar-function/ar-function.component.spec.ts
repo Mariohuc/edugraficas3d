@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ArFunctionComponent } from './ar-function.component';
 
@@ -6,7 +6,7 @@ describe('ArFunctionComponent', () => {
   let component: ArFunctionComponent;
   let fixture: ComponentFixture<ArFunctionComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ArFunctionComponent ]
     })

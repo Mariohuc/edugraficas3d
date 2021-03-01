@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ParametricCurveComponent } from './parametric-curve.component';
 
@@ -6,7 +6,7 @@ describe('ParametricCurveComponent', () => {
   let component: ParametricCurveComponent;
   let fixture: ComponentFixture<ParametricCurveComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ParametricCurveComponent ]
     })

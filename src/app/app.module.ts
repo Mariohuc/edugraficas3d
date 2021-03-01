@@ -24,7 +24,7 @@ import { GlobalService } from "./shared/services/global.service";
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot( AppRoutes, { useHash: true }),
+    RouterModule.forRoot( AppRoutes, { useHash: true, relativeLinkResolution: 'legacy' }),
     DemoMaterialModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
