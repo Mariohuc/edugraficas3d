@@ -52,6 +52,7 @@ export class ParametricCurve {
   private _param_d: number = 1;
   private _param_e: number = 1;
   // Properties to save 3D objects
+  private _clippingPlanes = null;
   private graphGeometry = null;
   private wireMaterial = null;
   private graphMesh = null;
@@ -212,7 +213,7 @@ export class ParametricCurve {
     this.createGraph();
   }
 
-  getZFuncTex() {
+  getPCFuncTex() {
     let node = math.parse(this.xFuncText);
 
     let transformed = node.transform((node) => {
@@ -262,15 +263,24 @@ export class ParametricCurve {
   }
 
   private createDefaultWireMaterial() {
-    let wireTexture = new THREE.TextureLoader().load(
-      'assets/images/square.png'
-    );
+    this._clippingPlanes = [
+      new THREE.Plane( new THREE.Vector3( -1, 0, 0 ), 25 ),//plane in X positive
+      new THREE.Plane( new THREE.Vector3( 1, 0, 0 ), 25 ), //plane in X negative
+      new THREE.Plane( new THREE.Vector3( 0, -1, 0 ), 25 ),//plane in Y positive
+      new THREE.Plane( new THREE.Vector3( 0, 1, 0 ), 25 ),//plane in Y negative
+      new THREE.Plane( new THREE.Vector3( 0, 0, -1 ), 25 ),//plane in Z positive
+      new THREE.Plane( new THREE.Vector3( 0, 0, 1 ), 25 ),//plane in Z negative
+    ];
+
+    let wireTexture = new THREE.TextureLoader().load('assets/images/square.png');
     wireTexture.wrapS = wireTexture.wrapT = THREE.RepeatWrapping;
     wireTexture.repeat.set(this.segments, this.segments);
     this.wireMaterial = new THREE.MeshBasicMaterial({
       map: wireTexture,
       vertexColors: true,
       side: THREE.DoubleSide,
+      clippingPlanes: this._clippingPlanes,
+      clipShadows: true
     });
   }
   addMeshTo(scene: THREE.Scene) {

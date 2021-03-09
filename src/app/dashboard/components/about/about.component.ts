@@ -2,11 +2,12 @@ import { Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } fro
 import { SpaceBackgroundEffect } from '../../../shared/models/spaceBackgroundEffect';
 
 @Component({
-  selector: 'app-main-content',
-  templateUrl: './main-content.component.html',
-  styleUrls: ['./main-content.component.css']
+  selector: 'app-about',
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.css']
 })
-export class MainContentComponent implements OnInit, OnDestroy {
+export class AboutComponent implements OnInit, OnDestroy {
+
   @ViewChild('logincontent') rendererContainer: ElementRef;
   space: SpaceBackgroundEffect;
 
@@ -26,7 +27,7 @@ export class MainContentComponent implements OnInit, OnDestroy {
 
     setTimeout( async ()=>{
       const newspace = new SpaceBackgroundEffect();
-      await newspace.init('main-content');
+      await newspace.init('about-content');
       
       this.space = newspace;
       this.rendererContainer.nativeElement.appendChild(this.space.renderer.domElement);
@@ -36,7 +37,7 @@ export class MainContentComponent implements OnInit, OnDestroy {
 
   @HostListener('window:resize', ['$event'])
   onWindowResize(event) {
-    
     this.space.onWindowResize(document.getElementById('main-content').getBoundingClientRect().height);
   }
+
 }

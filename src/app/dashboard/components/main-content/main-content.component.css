@@ -1,3 +1,15 @@
+#space-renderer {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  background: black;
+  overflow: hidden;
+
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -1;
+}
 
 .math-card{
   margin: 5px;
@@ -28,10 +40,16 @@
   margin-bottom: 0.5em;
 }
 
-.function-card{
-  background-color:green;
+.global-card {
+  background-color:purple;
 }
 
+.function-card{
+  background-color:rgb(1, 155, 175);
+}
+.pcurve-card{
+  background-color: #caad07;
+}
 .psurface-card{
   background-color: purple;
 }
@@ -54,7 +72,7 @@
 }
 
 .math-card .ar-button{
-  background-color: #d3a200;
+  background-color: #e00202;
   color: #ffffff;
 
   border: 2px solid;
@@ -62,8 +80,8 @@
 }
 .math-card .ar-button:hover{
   background-color: #ffffff;
-  color: #d3a200;
-  border-color: #d3a200;
+  color: #e00202;
+  border-color: #e00202;
 }
 
 .math-card .title{
@@ -108,6 +126,15 @@
 .math-card .math-card-actions{
   padding-top: 5px;
 }
+
+.math-card .math-card-actions{
+  padding-top: 5px;
+}
+
+.math-card .qs-math-card-actions{
+  padding-top: 0px;
+}
+
 
 .math-card mat-card-title{
   font-family: Cambria, Georgia, serif;

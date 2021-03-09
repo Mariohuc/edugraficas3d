@@ -193,7 +193,18 @@ export class QuadricSurface {
     });
     //console.log( math.simplify(transformed.toString()).toString() )
     const qstemp = math.parse( math.simplify(transformed.toString()).toString());
-    return ["$$ f(x,y,z) = " + qstemp.toTex() + " = 0 $$"];
+    let preamble = "La ecuación de la forma: $$ Ax^2 + By^2 + Cz^2 + Dxy + Eyz + Fxz + Gx + Hy + Iz + J = 0 $$";
+    preamble += `Con $ A = ${parseFloat(this.parser.get('A').toFixed(1))}, `;
+    preamble += `B = ${parseFloat(this.parser.get('B').toFixed(1))}, `;
+    preamble += `C = ${parseFloat(this.parser.get('C').toFixed(1))}, `;
+    preamble += `D = ${parseFloat(this.parser.get('D').toFixed(1))}, `;
+    preamble += `E = ${parseFloat(this.parser.get('E').toFixed(1))}, `;
+    preamble += `F = ${parseFloat(this.parser.get('F').toFixed(1))}, `;
+    preamble += `G = ${parseFloat(this.parser.get('G').toFixed(1))}, `;
+    preamble += `H = ${parseFloat(this.parser.get('H').toFixed(1))}, `;
+    preamble += `I = ${parseFloat(this.parser.get('I').toFixed(1))}, `;
+    preamble += `J = ${parseFloat(this.parser.get('J').toFixed(1))} $ se simplifica a:`;
+    return [preamble, "$$" + qstemp.toTex() + " = 0 $$"];
   }
 
   getOneParameter() {

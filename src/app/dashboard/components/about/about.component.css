@@ -1,0 +1,56 @@
+#space-renderer {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  background: black;
+  overflow: hidden;
+
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -1;
+}
+
+.math-card{
+  margin: 5px;
+}
+
+.example-header-image {
+  background-image: url('/assets/images/math-card-avatar.png');
+  background-size: cover;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+}
+
+.global-card {
+  background-color: goldenrod;
+}
+
+
+.math-card .title{
+  display: flex;
+  justify-content: start;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.math-card .subtitle{
+  font-family: Arial, sans-serif;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: start;
+  
+}
+.math-card .subtitle .sub-content{
+  margin: 0px;
+}
+
+.math-card mat-card-title{
+  font-family: Cambria, Georgia, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 28.4px;
+  margin: 0.2em 0em;
+}

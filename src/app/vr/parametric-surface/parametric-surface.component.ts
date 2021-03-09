@@ -73,7 +73,7 @@ export class ParametricSurfaceComponent implements OnInit, OnDestroy {
       this.dialog.open(MathjaxDialogComponent, {
         data: {
           title: 'Superficie paramétrica',
-          mathContent: psurface3d.getZFuncTex()
+          mathContent: psurface3d.getPSFuncTex()
         }
       });
     });

@@ -70,7 +70,7 @@ export class ParametricCurveComponent implements OnInit, OnDestroy {
       this.dialog.open(MathjaxDialogComponent, {
         data: {
           title: 'Curva paramétrica',
-          mathContent: pcurve3d.getZFuncTex()
+          mathContent: pcurve3d.getPCFuncTex()
         }
       });
     });

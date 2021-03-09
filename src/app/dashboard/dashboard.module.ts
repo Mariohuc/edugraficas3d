@@ -5,13 +5,12 @@ import { DemoMaterialModule } from '../demo-material-module';
 import { DashboardRoutes } from './dashboard.routing'
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { HomeComponent } from './home/home.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
-
+import { AboutComponent } from './components/about/about.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, MainContentComponent],
+  declarations: [MainContentComponent, AboutComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(DashboardRoutes),
