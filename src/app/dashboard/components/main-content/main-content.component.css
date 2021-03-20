@@ -16,25 +16,6 @@
 }
 
 .example-header-image {
-  background-image: url('/assets/images/math-card-avatar.png');
-  background-size: cover;
-  margin-top: 0em;
-  margin-bottom: 0.5em;
-}
-.example-header-image-2 {
-  background-image: url('/assets/images/math-card-avatar-2.png');
-  background-size: cover;
-  margin-top: 0em;
-  margin-bottom: 0.5em;
-}
-.example-header-image-3 {
-  background-image: url('/assets/images/math-card-avatar-3.png');
-  background-size: cover;
-  margin-top: 0em;
-  margin-bottom: 0.5em;
-}
-.example-header-image-4 {
-  background-image: url('/assets/images/math-card-avatar-4.png');
   background-size: cover;
   margin-top: 0em;
   margin-bottom: 0.5em;
