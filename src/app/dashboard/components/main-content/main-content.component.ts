@@ -31,7 +31,7 @@ export class MainContentComponent implements OnInit, OnDestroy {
       this.space = newspace;
       this.rendererContainer.nativeElement.appendChild(this.space.renderer.domElement);
       this.space.animate();
-    }, 500)      
+    }, 800)      
   }
 
   @HostListener('window:resize', ['$event'])

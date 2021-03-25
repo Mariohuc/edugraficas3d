@@ -12,4 +12,8 @@ export class FullComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goToGitHub(){
+    window.open('https://github.com/Mariohuc/edugraficas3d', "_blank") || window.location.replace('https://github.com/Mariohuc/edugraficas3d');
+  }
+
 }
