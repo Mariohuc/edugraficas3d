@@ -14,4 +14,5 @@ ng serve
 ```
 ### Compiles and minifies for production
 ```
-npm run build
+ng build
+```
