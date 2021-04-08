@@ -66,11 +66,7 @@ export class Scene3D {
     light2.position.set(0, 0, -250);
     this.scene.add(light1);
     this.scene.add(light2);
-    // GRID HELPER
-    let gridHelper = new THREE.GridHelper(this.axesItem.axis_size*2, this.axesItem.axis_size*2);
-    // Rotate to lie in x-y plane
-    gridHelper.rotation.x = Math.PI / 2;
-    this.scene.add(gridHelper);
+    
     //Create axes and relative elements
     this.font3d = await this.load3DFont();
 
@@ -115,6 +111,18 @@ export class Scene3D {
     //Letter X
     this.xPrefab = this.createText({ x: this.axesItem.axis_size, y: 0, z: 0.3, text: "X", color: 0xff5500 });
     this.plane3D.add(this.xPrefab);
+    //Letter Y
+    this.yPrefab = this.createText({ x: 0, y: this.axesItem.axis_size, z: 0.3, text: "Y", color: 0x00ff00, forma: 2 });
+    this.plane3D.add(this.yPrefab);
+    //Letter Z
+    this.zPrefab = this.createText({ x: 0, y: 0, z: this.axesItem.axis_size + 0.5, text: "Z", color: 0x1a1aff, forma: 2 });
+    this.plane3D.add(this.zPrefab);
+
+    // GRID HELPER
+    let gridHelper = new THREE.GridHelper(this.axesItem.axis_size*2, this.axesItem.axis_size*2);
+    // Rotate to lie in x-y plane
+    gridHelper.rotation.x = Math.PI / 2;
+    this.scene.add(gridHelper);
     // Create points for axis X
     var index = this.axesItem.axis_size - (this.axesItem.axis_size % 5);
     var temp = -index;
@@ -133,9 +141,7 @@ export class Scene3D {
       }) );
       index -= 5;
     }
-    //Letter Y
-    this.yPrefab = this.createText({ x: 0, y: this.axesItem.axis_size, z: 0.3, text: "Y", color: 0x00ff00, forma: 2 });
-    this.plane3D.add(this.yPrefab);
+    
     /* points for axis Y */
     index = -temp;
     while (index >= temp) {
@@ -154,9 +160,7 @@ export class Scene3D {
       }));
       index -= 5;
     }
-    //Letter Z
-    this.zPrefab = this.createText({ x: 0, y: 0, z: this.axesItem.axis_size + 0.5, text: "Z", color: 0x1a1aff, forma: 2 });
-    this.plane3D.add(this.zPrefab);
+    
     /* points for axis Z */
     index = -temp;
     while (index >= temp) {

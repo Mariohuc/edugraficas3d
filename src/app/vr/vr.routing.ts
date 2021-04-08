@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { FunctionComponent } from './function/function.component';
 import { ParametricSurfaceComponent } from './parametric-surface/parametric-surface.component';
 import { ParametricCurveComponent } from './parametric-curve/parametric-curve.component';
-import { QuadricSurfaceComponent } from "./quadric-surface/quadric-surface.component";
+import { ImplicitSurfaceComponent } from "./implicit-surface/implicit-surface.component";
 
 export const VrRoutes: Routes = [
   {
@@ -18,7 +18,7 @@ export const VrRoutes: Routes = [
     component: ParametricCurveComponent,
   },
   {
-    path: 'quadric-surface-grapher',
-    component: QuadricSurfaceComponent
+    path: 'implicit-surface-grapher',
+    component: ImplicitSurfaceComponent
   }
 ];

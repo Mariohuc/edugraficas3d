@@ -7,11 +7,11 @@ import { DemoMaterialModule } from '../demo-material-module'
 
 import { VrRoutes } from './vr.routing';
 import { ParametricSurfaceComponent } from './parametric-surface/parametric-surface.component';
-import { QuadricSurfaceComponent } from './quadric-surface/quadric-surface.component';
+import { ImplicitSurfaceComponent } from './implicit-surface/implicit-surface.component';
 import { ParametricCurveComponent } from './parametric-curve/parametric-curve.component';
 
 @NgModule({
-  declarations: [ FunctionComponent, ParametricSurfaceComponent, QuadricSurfaceComponent, ParametricCurveComponent],
+  declarations: [ FunctionComponent, ParametricSurfaceComponent, ImplicitSurfaceComponent, ParametricCurveComponent],
   imports: [
     CommonModule,
     DemoMaterialModule,

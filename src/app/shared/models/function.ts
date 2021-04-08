@@ -167,7 +167,7 @@ export class Function {
       }
     });
     //console.log( math.simplify(transformed.toString()).toString() )
-    const ztemp = math.parse( math.simplify(transformed.toString()).toString());
+    const ztemp = math.parse( transformed.toString() );
     return ["$$z = f(x,y) = " + ztemp.toTex() + "$$"];
   }
 

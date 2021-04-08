@@ -207,7 +207,7 @@ export class ParametricSurface {
       }
     });
     
-    const xtemp = math.parse(  math.simplify(transformed.toString()).toString());
+    const xtemp = math.parse( transformed.toString() );
 
     node = math.parse(this.yFuncText);
     
@@ -219,7 +219,7 @@ export class ParametricSurface {
       }
     });
     
-    const ytemp = math.parse(  math.simplify(transformed.toString()).toString());
+    const ytemp = math.parse( transformed.toString() );
 
     node = math.parse(this.zFuncText);
     
@@ -231,7 +231,7 @@ export class ParametricSurface {
       }
     });
     
-    const ztemp = math.parse(  math.simplify(transformed.toString()).toString());
+    const ztemp = math.parse( transformed.toString() );
     return [
       "$$x = f(u,v) = " + xtemp.toTex() + "$$",
       "$$y = g(u,v) = " + ytemp.toTex() + "$$", 

@@ -226,7 +226,7 @@ export class ParametricCurve {
       }
     });
 
-    const xtemp = math.parse(math.simplify(transformed.toString()).toString());
+    const xtemp = math.parse( transformed.toString() );
 
     node = math.parse(this.yFuncText);
 
@@ -240,7 +240,7 @@ export class ParametricCurve {
       }
     });
 
-    const ytemp = math.parse(math.simplify(transformed.toString()).toString());
+    const ytemp = math.parse( transformed.toString() );
 
     node = math.parse(this.zFuncText);
 
@@ -254,7 +254,7 @@ export class ParametricCurve {
       }
     });
 
-    const ztemp = math.parse(math.simplify(transformed.toString()).toString());
+    const ztemp = math.parse( transformed.toString() );
     return [
       '$$x = f(t) = ' + xtemp.toTex() + '$$',
       '$$y = g(t) = ' + ytemp.toTex() + '$$',

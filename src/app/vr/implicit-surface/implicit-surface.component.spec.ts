@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { QuadricSurfaceComponent } from './quadric-surface.component';
+import { ImplicitSurfaceComponent } from './implicit-surface.component';
 
-describe('QuadricSurfaceComponent', () => {
-  let component: QuadricSurfaceComponent;
-  let fixture: ComponentFixture<QuadricSurfaceComponent>;
+describe('ImplicitSurfaceComponent', () => {
+  let component: ImplicitSurfaceComponent;
+  let fixture: ComponentFixture<ImplicitSurfaceComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ QuadricSurfaceComponent ]
+      declarations: [ ImplicitSurfaceComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(QuadricSurfaceComponent);
+    fixture = TestBed.createComponent(ImplicitSurfaceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
